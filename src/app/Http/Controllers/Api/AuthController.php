@@ -88,7 +88,6 @@ class AuthController extends Controller
             $accessToken = $user->createToken('access_token', [TokenAbility::ACCESS_API->value], Carbon::now()->addMinutes(config('sanctum.expiration')));
             return response(['ok' => true, 'access_token' => $accessToken->plainTextToken]);
            
-        
     }
 
 }
